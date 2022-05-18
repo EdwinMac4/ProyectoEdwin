@@ -88,7 +88,7 @@ public class MernTest {
 		  driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr/td[5]/button[2]")).click();
 		  driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Edwin Mac'])[2]/following::button[1]")).click();
 		  pause(3000);
-		  assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*edwinmac@gmail\\.com[\\s\\S]*$"));
+		  assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*edwinmac@gmail\\.com[\\s\\S]*$"));
 	  }
 	  
 	  private void pause(long mils) {
